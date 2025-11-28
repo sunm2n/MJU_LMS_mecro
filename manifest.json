@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "MJU LMS Auto Player",
+  "version": "1.0",
+  "description": "명지대학교 LMS 자동 재생 및 출석 처리 도우미",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "*://lms.mju.ac.kr/*",
+    "*://*.kinxzone.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://lms.mju.ac.kr/*", "*://*.kinxzone.com/*"],
+      "js": ["injected.js"],
+      "world": "MAIN",
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://lms.mju.ac.kr/*", "*://*.kinxzone.com/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
