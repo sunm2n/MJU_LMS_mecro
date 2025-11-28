@@ -60,9 +60,23 @@ cd mju-lms-macro
 ### 2. 크롬 확장 프로그램 로드
 
 1. 크롬 브라우저 주소창에 `chrome://extensions` 입력
+
+![다운로드](screen/screen1.jpg)
 2. 우측 상단 **'개발자 모드(Developer mode)'** 스위치 ON
+
 3. 좌측 상단 **'압축해제된 확장 프로그램을 로드합니다'** 클릭
+
+![확장 프로그램 페이지](screen/screen2.png)
+
 4. `mju-lms-macro` 폴더 선택
+
+![확장 프로그램 로드](screen/screen3.png)
+
+5. 확장 프로그램에 잘 뜨는지 확인한다.
+
+![설치 완료](screen/screen4.png)
+
+6. 재생 버튼 활성화를 확인한다.
 
 ### 3. 사용
 
@@ -86,7 +100,12 @@ mju-lms-macro/
 ├── content.js           # DOM 조작 및 이벤트 감지 (핵심 로직)
 ├── background.js        # 메시지 중계자 (Service Worker)
 ├── popup.html           # 팝업 UI
-└── popup.js             # 팝업 제어 스크립트
+├── popup.js             # 팝업 제어 스크립트
+└── screen/              # 스크린샷 폴더
+    ├── screen1.jpg      # 다운로드 화면
+    ├── screen2.png      # 확장 프로그램 페이지
+    ├── screen3.png      # 확장 프로그램 로드
+    └── screen4.png      # 설치 완료
 ```
 
 ---
